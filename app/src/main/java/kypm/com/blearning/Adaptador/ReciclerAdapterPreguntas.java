@@ -43,11 +43,46 @@ public class ReciclerAdapterPreguntas extends RecyclerView.Adapter<ReciclerAdapt
         holder.pregunta.setText(position+1+". "+listPregunta.get(position).getPregunta());
         /*holder.radioButton.setText(listPregunta.get(position).getRespuesta());
         holder.radioButton2.setText(listPregunta.get(position).getRespuesta());*/
-        holder.radioButton.setChecked(lastSelectedPosition == position);
-        /*holder.radioButton2.setText(listPregunta.get(position).getPreguntaList().get(position+1));
-        holder.radioButton3.setText(listPregunta.get(position).getPreguntaList().get(position+2));
-        holder.radioButton4.setText(listPregunta.get(position).getPreguntaList().get(position+3));
-        holder.radioButton5.setText(listPregunta.get(position).getPreguntaList().get(position+4));*/
+        //holder.radioButton.setChecked(lastSelectedPosition == position);
+
+        switch (position){
+            case 0:
+                holder.radioButton.setText(listPregunta.get(position).getPreguntaList().get(position));
+                holder.radioButton2.setText(listPregunta.get(position).getPreguntaList().get(position+1));
+                holder.radioButton3.setText(listPregunta.get(position).getPreguntaList().get(position+2));
+                holder.radioButton4.setText(listPregunta.get(position).getPreguntaList().get(position+3));
+                holder.radioButton5.setText(listPregunta.get(position).getPreguntaList().get(position+4));
+                break;
+            case 1:
+                holder.radioButton.setText(listPregunta.get(position).getPreguntaList().get(position+4));
+                holder.radioButton2.setText(listPregunta.get(position).getPreguntaList().get(position+5));
+                holder.radioButton3.setText(listPregunta.get(position).getPreguntaList().get(position+6));
+                holder.radioButton4.setText(listPregunta.get(position).getPreguntaList().get(position+7));
+                holder.radioButton5.setText(listPregunta.get(position).getPreguntaList().get(position+8));
+                break;
+            case 2:
+                holder.radioButton.setText(listPregunta.get(position).getPreguntaList().get(position+8));
+                holder.radioButton2.setText(listPregunta.get(position).getPreguntaList().get(position+9));
+                holder.radioButton3.setText(listPregunta.get(position).getPreguntaList().get(position+10));
+                holder.radioButton4.setText(listPregunta.get(position).getPreguntaList().get(position+11));
+                holder.radioButton5.setText(listPregunta.get(position).getPreguntaList().get(position+12));
+                break;
+            case 3:
+                holder.radioButton.setText(listPregunta.get(position).getPreguntaList().get(position+12));
+                holder.radioButton2.setText(listPregunta.get(position).getPreguntaList().get(position+13));
+                holder.radioButton3.setText(listPregunta.get(position).getPreguntaList().get(position+14));
+                holder.radioButton4.setText(listPregunta.get(position).getPreguntaList().get(position+15));
+                holder.radioButton5.setText(listPregunta.get(position).getPreguntaList().get(position+16));
+                break;
+            case 4:
+                holder.radioButton.setText(listPregunta.get(position).getPreguntaList().get(position+16));
+                holder.radioButton2.setText(listPregunta.get(position).getPreguntaList().get(position+17));
+                holder.radioButton3.setText(listPregunta.get(position).getPreguntaList().get(position+18));
+                holder.radioButton4.setText(listPregunta.get(position).getPreguntaList().get(position+19));
+                holder.radioButton5.setText(listPregunta.get(position).getPreguntaList().get(position+20));
+                break;
+        }
+
     }
 
     @Override
@@ -64,11 +99,12 @@ public class ReciclerAdapterPreguntas extends RecyclerView.Adapter<ReciclerAdapt
         public ViewHolderPregunta(@NonNull View itemView) {
             super(itemView);
             pregunta = itemView.findViewById(R.id.tv_pregunta);
+
             radioButton = itemView.findViewById(R.id.radioButtonRespuesta);
-            /*radioButton2 = itemView.findViewById(R.id.radioButtonRespuesta2);
+            radioButton2 = itemView.findViewById(R.id.radioButtonRespuesta2);
             radioButton3 = itemView.findViewById(R.id.radioButtonRespuesta3);
             radioButton4 = itemView.findViewById(R.id.radioButtonRespuesta4);
-            radioButton5 = itemView.findViewById(R.id.radioButtonRespuesta5);*/
+            radioButton5 = itemView.findViewById(R.id.radioButtonRespuesta5);
 
             radioButton.setOnClickListener(new View.OnClickListener() {
                 @Override

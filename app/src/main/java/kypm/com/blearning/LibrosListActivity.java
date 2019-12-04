@@ -44,11 +44,11 @@ public class LibrosListActivity extends AppCompatActivity implements ReciclerAda
     public ArrayList<Libro> data(){
         ArrayList<Libro> libros = new ArrayList<>();
         libros.add(new Libro(R.drawable.book,"Libro 1","Historia","3", "Esta historia 1"));
-        libros.add(new Libro(R.drawable.book,"Libro 2","Historia","3", "Esta historia 2"));
-        libros.add(new Libro(R.drawable.book,"Libro 13","Historia","3", "Esta historia 3"));
-        libros.add(new Libro(R.drawable.book,"Libro 41","Historia","3", "Esta historia 4"));
-        libros.add(new Libro(R.drawable.book,"Libro 51","Historia","3", "Esta historia 5"));
-        libros.add(new Libro(R.drawable.book,"Libro 21","Historia","3", "Esta historia 6"));
+        libros.add(new Libro(R.drawable.book,"Libro 2","Historia","4", "Esta historia 2"));
+        libros.add(new Libro(R.drawable.book,"Libro 3","Historia","5", "Esta historia 3"));
+        libros.add(new Libro(R.drawable.book,"Libro 4","Historia","1", "Esta historia 4"));
+        libros.add(new Libro(R.drawable.book,"Libro 5","Historia","2", "Esta historia 5"));
+        libros.add(new Libro(R.drawable.book,"Libro 6","Historia","6", "Esta historia 6"));
         return  libros;
     }
 
