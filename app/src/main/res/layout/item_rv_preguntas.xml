@@ -41,7 +41,8 @@
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <RadioButton
                 android:id="@+id/radioButtonRespuesta"
@@ -50,6 +51,31 @@
                 android:layout_weight="1"
                 android:text="respuesta" />
 
+            <!--RadioButton
+                android:id="@+id/radioButtonRespuesta2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="respuesta" />
+            <RadioButton
+                android:id="@+id/radioButtonRespuesta3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="respuesta" />
+
+            <RadioButton
+                android:id="@+id/radioButtonRespuesta4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="respuesta" />
+            <RadioButton
+                android:id="@+id/radioButtonRespuesta5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="respuesta" /-->
         </RadioGroup>
 
 

@@ -50,7 +50,7 @@ public class Preguntas extends AppCompatActivity {
         recyclerView.setLayoutManager(llm);
 
 
-        listPreguntas = data();
+        listPreguntas = (List<Pregunta>) data(libro.getTitulo());
         reciclerAdapterPreguntas = new ReciclerAdapterPreguntas(getApplicationContext(), listPreguntas);
         recyclerView.setAdapter(reciclerAdapterPreguntas);
 
@@ -83,10 +83,48 @@ public class Preguntas extends AppCompatActivity {
         });
     }
 
-    public ArrayList<Pregunta> data(){
+    public ArrayList<Pregunta> data(String titulo){
+        ArrayList<String> respuestas = new ArrayList<>();
+        respuestas.add("rpta1");
+        respuestas.add("rpta2");
+        respuestas.add("rpta3");
+        respuestas.add("rpta4");
+        respuestas.add("rpta5");
+
+        respuestas.add("rpta1");
+        respuestas.add("rpta2");
+        respuestas.add("rpta3");
+        respuestas.add("rpta4");
+        respuestas.add("rpta5");
+
+
         ArrayList<Pregunta> preguntas = new ArrayList<>();
-        preguntas.add(new Pregunta("Libro 1","como se murio el cuento?","por aburrimiento",1));
-        preguntas.add(new Pregunta("Libro 1","como se murio el cuento?","por estres",0));
+        switch (titulo){
+            case "Libro 1":
+                preguntas.add(new Pregunta("Libro 1","como se murio el cuento?","por estres",0,respuestas));
+                preguntas.add(new Pregunta("Libro 1","Porque se murio el cuento?","por estres",0,respuestas));
+                preguntas.add(new Pregunta("Libro 1","como se murio el cuento?","por estres",0,respuestas));
+                preguntas.add(new Pregunta("Libro 1","Porque se murio el cuento?","por estres",0,respuestas));
+                preguntas.add(new Pregunta("Libro 1","como se murio el cuento?","por estres",0,respuestas));
+                break;
+            case "Libro 2":
+                preguntas.add(new Pregunta("Libro 2","Hasta?","por estres",0,respuestas));
+                preguntas.add(new Pregunta("Libro 2","como ?","por estres",0,respuestas));
+                preguntas.add(new Pregunta("Libro 2","Porque ?","por estres",0,respuestas));
+                preguntas.add(new Pregunta("Libro 2","Seguro?","por estres",0,respuestas));
+                preguntas.add(new Pregunta("Libro 2","Nunca?","por estres",0,respuestas));
+                break;
+            case "Libro 13":
+                preguntas.add(new Pregunta("Libro 13","Huy?","por estres",0,respuestas));
+                preguntas.add(new Pregunta("Libro 13","Hay?","por estres",0,respuestas));
+                preguntas.add(new Pregunta("Libro 13","Hoy?","por estres",0,respuestas));
+                preguntas.add(new Pregunta("Libro 13","Plp?","por estres",0,respuestas));
+                preguntas.add(new Pregunta("Libro 13","Sera","por estres",0,respuestas));
+                break;
+        }
+        /*preguntas.add(new Pregunta("Libro 1","como se murio el cuento?","por aburrimiento",1));
+        preguntas.add(new Pregunta("Libro 1","como se murio el cuento?","por estres",0));*/
+
         return  preguntas;
     }
 }
